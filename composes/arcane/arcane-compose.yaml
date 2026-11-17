@@ -17,11 +17,11 @@ services:
       - arcane-data:/app/data
     environment:
       TZ: ${TZ:+UTC}
-      APP_URL: ${APP_URL:-http://localhost:3552}
-      LOG_LEVEL: ${LOG_LEVEL:-info}
-      LOG_JSON: ${LOG_JSON:-false}
-      ENCRYPTION_KEY: ${ENCRYPTION_KEY:?required}
-      ANALYTICS_DISABLED: ${ANALYTICS_DISABLED:-true}
+      ARCANE_APP_URL: ${ARCANE_APP_URL:-http://localhost:3552}
+      ARCANE_LOG_LEVEL: ${ARCANE_LOG_LEVEL:-info}
+      ARCANE_LOG_JSON: ${ARCANE_LOG_JSON:-false}
+      ARCANE_ENCRYPTION_KEY: ${ARCANE_ENCRYPTION_KEY:?required}
+      ARCANE_ANALYTICS_ENABLED: ${ARCANE_ANALYTICS_ENABLED:-fals}
     cgroup: host
     restart: unless-stopped
     extra_hosts:
